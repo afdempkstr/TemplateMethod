@@ -10,11 +10,15 @@ namespace TemplateMethodDemo
     {
         public void Make()
         {
+            Console.WriteLine($"Making a {GetType().Name}");
+
             var ingredients = GatherIngredients();
             var dough = MixIngredients(ingredients);
             var readyDough = Rest(dough);
             var bread = Bake(readyDough);
             var sliced = Slice(bread);
+
+            Console.WriteLine(sliced);
 
             //Slice(Bake(Rest(MixIngredients(GathersIngredients()))));
         }

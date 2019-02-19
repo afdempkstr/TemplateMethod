@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TemplateMethodDemo
 {
-    class Cornbread : Bread
+    public class Dinkel : Bread
     {
         private IEnumerable<Ingredient> _ingredients;
 
@@ -12,9 +12,10 @@ namespace TemplateMethodDemo
         {
             _ingredients = new[]
             {
-                new Ingredient("Corn flour"),
+                new Ingredient("Dinkel flour"),
                 new Ingredient("Yeast"),
-                new Ingredient("Salt") 
+                new Ingredient("Salt"),
+                new Ingredient("Sunflower seeds") 
             };
             return _ingredients;
         }
@@ -26,17 +27,17 @@ namespace TemplateMethodDemo
 
         public override string Rest(string dough)
         {
-            return $" {dough} resting for 5'";
+            return $" {dough} resting for 15'";
         }
 
         public override string Bake(string dough)
         {
-            return $" {dough} baking at 180 for 30'";
+            return $" {dough} baking at 190 for 40'";
         }
 
         public override string Slice(string bread)
         {
-            return $" {bread} sliced at 1cm";
+            return bread;
         }
     }
 }

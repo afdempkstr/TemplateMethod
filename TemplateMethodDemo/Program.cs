@@ -8,6 +8,11 @@ namespace TemplateMethodDemo
         {
             var cornbread = new Cornbread();
             cornbread.Make();
+
+            var dinkel = new Dinkel();
+            dinkel.Make();
+
+            Console.Read();
         }
     }
 }
